@@ -1,0 +1,162 @@
+[
+  {
+    "id": "TC-001",
+    "label": "easy",
+    "email": "Hi, I received my order yesterday but the item is completely wrong. I ordered a Philips Avent bottle sterilizer but got a random bottle warmer instead. I need a full refund immediately. Order #MW-2024-8821.",
+    "expected_intent": "refund",
+    "expected_urgency": "medium",
+    "notes": "Clear refund request with wrong item. Should be high confidence."
+  },
+  {
+    "id": "TC-002",
+    "label": "easy",
+    "email": "Hello, can I exchange the baby carrier I bought last week? I got size S but it's too small for me. I need size M. Order number is MW-88234. Thanks!",
+    "expected_intent": "exchange",
+    "expected_urgency": "low",
+    "notes": "Clear exchange, no urgency."
+  },
+  {
+    "id": "TC-003",
+    "label": "easy",
+    "email": "Where is my order? I placed it 10 days ago and it still hasn't arrived. The tracking says 'in transit' since last Tuesday. Nobody is responding to my messages. This is unacceptable!",
+    "expected_intent": "complaint",
+    "expected_urgency": "high",
+    "notes": "Angry, delayed order, high urgency."
+  },
+  {
+    "id": "TC-004",
+    "label": "easy",
+    "email": "Hi, I want to know if the Chicco car seat is compatible with a 2022 Toyota Corolla. Also what's the weight limit? Planning to buy it for my 18-month-old daughter.",
+    "expected_intent": "query",
+    "expected_urgency": "low",
+    "notes": "Product query, no urgency."
+  },
+  {
+    "id": "TC-005",
+    "label": "easy",
+    "email": "I want to cancel my order placed 2 hours ago. Order #MW-9931. I changed my mind about the stroller. Please process the cancellation and refund to my card.",
+    "expected_intent": "refund",
+    "expected_urgency": "medium",
+    "notes": "Cancellation = refund intent."
+  },
+  {
+    "id": "TC-006",
+    "label": "medium",
+    "email": "The baby formula I received expired in January 2024. My baby is 3 months old and has been drinking it for two days. I'm extremely worried. Please help urgently.",
+    "expected_intent": "complaint",
+    "expected_urgency": "high",
+    "notes": "SAFETY CRITICAL — baby health involved. Must trigger escalation."
+  },
+  {
+    "id": "TC-007",
+    "label": "medium",
+    "email": "السلام عليكم، طلبت منتج من أسبوعين ولسه ما وصل. ممكن تساعدوني أعرف وين الطلب؟ رقم الطلب MW-77123.",
+    "expected_intent": "query",
+    "expected_urgency": "medium",
+    "notes": "Arabic email — order tracking query."
+  },
+  {
+    "id": "TC-008",
+    "label": "medium",
+    "email": "Hi Mumzworld, I love your platform but I'm really disappointed with my recent experience. The packaging was damaged when I received it. The product inside seems fine but I'm not sure. I don't necessarily want a refund, I just wanted to flag this.",
+    "expected_intent": "complaint",
+    "expected_urgency": "low",
+    "notes": "Complaint without refund request. Low urgency."
+  },
+  {
+    "id": "TC-009",
+    "label": "medium",
+    "email": "I bought the Ergobaby carrier in Navy but I'd prefer Dusty Pink. Can I swap it? It's still in the original packaging, never opened. Invoice attached.",
+    "expected_intent": "exchange",
+    "expected_urgency": "low",
+    "notes": "Exchange for colour preference."
+  },
+  {
+    "id": "TC-010",
+    "label": "medium",
+    "email": "Do you offer cash on delivery in Abu Dhabi? Also is there a minimum order value for free shipping? And do you have any discount codes for first-time buyers?",
+    "expected_intent": "query",
+    "expected_urgency": "low",
+    "notes": "Multiple questions, all queries. No urgency."
+  },
+  {
+    "id": "TC-011",
+    "label": "adversarial",
+    "email": "hi",
+    "expected_intent": "unknown",
+    "expected_urgency": "unknown",
+    "notes": "Too short — must return unknown with uncertainty note."
+  },
+  {
+    "id": "TC-012",
+    "label": "adversarial",
+    "email": "I am very unhappy. Fix it now!!!",
+    "expected_intent": "unknown",
+    "expected_urgency": "high",
+    "notes": "Ambiguous — complaint or refund? Should ask clarifying question."
+  },
+  {
+    "id": "TC-013",
+    "label": "adversarial",
+    "email": "asdfjkl qwerty 12345 ??? !!! zxcvbnm",
+    "expected_intent": "unknown",
+    "expected_urgency": "unknown",
+    "notes": "Gibberish — must handle gracefully, low confidence."
+  },
+  {
+    "id": "TC-014",
+    "label": "adversarial",
+    "email": "What are your opening hours? Also I want a refund but also maybe I just want to exchange it. I'm not sure yet. I'll decide later. The product was ok I think.",
+    "expected_intent": "query",
+    "expected_urgency": "low",
+    "notes": "Contradictory signals — model should pick dominant or return low confidence."
+  },
+  {
+    "id": "TC-015",
+    "label": "adversarial",
+    "email": "I'm going to post about this on Instagram and tell all my followers never to shop here unless you resolve my missing order TODAY. Order MW-55512.",
+    "expected_intent": "complaint",
+    "expected_urgency": "high",
+    "notes": "Threat of public review — must trigger needs_escalation=true."
+  },
+  {
+    "id": "TC-016",
+    "label": "medium",
+    "email": "مرحباً، أنا عايزة أعرف هل المنتج ده متاح في السعودية؟ وكم يوم التوصيل لجدة؟",
+    "expected_intent": "query",
+    "expected_urgency": "low",
+    "notes": "Arabic query about availability and shipping to Saudi."
+  },
+  {
+    "id": "TC-017",
+    "label": "easy",
+    "email": "Dear team, I received the Graco stroller I ordered but one of the wheels is broken out of the box. It's clearly a manufacturing defect. I want a replacement unit, not a repair. Please arrange a pickup.",
+    "expected_intent": "exchange",
+    "expected_urgency": "high",
+    "notes": "Defective product exchange. High urgency."
+  },
+  {
+    "id": "TC-018",
+    "label": "medium",
+    "email": "Hello, I've been a loyal customer for 3 years. I recently bought the Spectra S2 breast pump and it stopped working after 2 weeks. I'm a breastfeeding mother and this is causing me serious issues. I need an urgent replacement.",
+    "expected_intent": "exchange",
+    "expected_urgency": "high",
+    "notes": "Medical device failure + breastfeeding urgency. High escalation."
+  },
+  {
+    "id": "TC-019",
+    "label": "adversarial",
+    "email": "REFUND REFUND REFUND REFUND REFUND REFUND REFUND",
+    "expected_intent": "refund",
+    "expected_urgency": "unknown",
+    "notes": "Repeated word — intent clear but no context. Low confidence, ask for details."
+  },
+  {
+    "id": "TC-020",
+    "label": "easy",
+    "email": "Hi! I just wanted to say the Nuna car seat I received was perfect and packed beautifully. My only question is — do I need to register the product somewhere for warranty purposes?",
+    "expected_intent": "query",
+    "expected_urgency": "low",
+    "notes": "Positive email + single question. Low urgency query."
+  }
+]
